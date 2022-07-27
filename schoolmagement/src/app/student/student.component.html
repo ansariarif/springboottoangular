@@ -1,0 +1,70 @@
+<section>
+    <app-home></app-home>
+</section>
+
+
+
+<div class="ShowUser">
+    <h1>students </h1>
+    <div class="level">
+        <div class="searching">
+            <nav >
+                <span class="material-icons blue-color">person_search</span>
+                <input type="text" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="enter name"  class="search"  >
+            </nav>
+        </div >
+        <div class="addition">
+            <a  [routerLink]="['/students/addstudform/']"><span class="material-icons">person_add</span> New Admision</a>
+
+        </div>
+
+    </div>
+
+  <!--
+    <nav >
+        <span class="material-icons blue-color">person_search</span>
+        <input type="text" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="enter name"  class="search"  >
+    </nav>
+    <div class="link">
+        <a  [routerLink]="['/students/addstudform/']"><span class="material-icons">person_add</span> New Admision</a>
+
+    </div>--> 
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th>RollNo</th>
+                <th>Name</th>
+             <!--   <th>Password</th> -->
+                <th>STD</th>
+                <th>Contact</th>
+                <th>Address</th>
+                
+                
+                <th>Edit</th>
+                <th><span  class="material-icons red-color">delete</span> </th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of student;let i = index">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+             <!--   <td>{{student.password}}</td> -->
+                <td>{{student.std}}</td>
+                <td>{{student.contact}}</td>
+                <td>{{student.address}}</td>
+                
+               
+                <td><a  [routerLink]="['/students/edit/',student.id]"> <span class="material-icons">edit</span></a></td>
+              <!--  <td><button (click)="deleteStudent(student.id,i)"><i class="material-icons">delete</i></button></td>-->
+                <td><i (click)="deleteStudent(student.id,i)" class="material-icons">delete</i></td>
+               
+              
+
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+

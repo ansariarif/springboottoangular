@@ -1,0 +1,151 @@
+<table border="1">
+  <caption>Book information</caption>
+  <thead>
+    <tr><th>ID</th><th>Name</th><th>Publish date</th><th>Price</th><th>Date</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of bookArray">
+      <td>{{book.bookId }}</td>
+      <td>{{book.bookName | uppercase}}</td>
+      <td>{{book.bookName | lowercase}}</td>
+      <td>{{book.bookName | titlecase}}</td>
+
+      <td>{{book.publishDate | date}}</td>
+      <td>{{book.bprice}}</td>
+     
+    </tr>
+  </tbody>
+</table>
+<hr>
+<section>
+  <h2> slice number , currency</h2>
+
+
+  <table border="2"> 
+    <caption>Book information</caption>
+    <thead>
+      <tr><th>Name</th><th>Slice</th><th>price</th><th>slice(si ,ei)</th><th>slice(-si,-ei)</th><th>price</th><th>number</th><th></th><th></th>
+      <th></th><th>currency</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookArray">
+        <td>{{book.bookName}}</td>
+        <td>{{book.bookName | slice : 3}}</td> <!--work same as slice(si) function-->
+        <td>{{book.bookName | slice : 3 :10}}</td>
+        <td>{{book.bookName | slice : -3}}</td>
+        <td>{{book.bookName | slice : -12:-3}}</td>
+
+        <td>{{book.bprice}}</td>
+        <td>{{book.bprice | number}}</td> <!--decimal digits : min 0, max: 3-->
+        <td>{{book.bprice | number : '3.3-3'}}</td>
+        <td>{{book.bprice | number : '4.3-3'}}</td>
+        <td>{{book.bprice | number : '3.1-2'}}</td>
+
+        <td>{{book.bprice | currency}}</td> <!-- $ : symbol : 2-2 : 2 decimal digits-->
+        <td>{{book.bprice | currency : 'INR'}}</td>
+        <td>{{book.bprice | currency : 'EUR'}}</td>
+        <td>{{book.bprice | currency : 'INR' : 'code'}}</td>
+        <td>{{book.bprice | currency : 'INR': false}}</td>
+
+       
+      </tr>
+    </tbody>
+  </table>
+</section>
+<hr>
+
+
+
+<section>
+  <table border="1">
+    <caption>Book information</caption>
+    <thead>
+      <tr><th (click)="sort('bookId')">ID</th><th (click)="sort('bookName')" >Name</th><th (click)="sort('bprice')">price</th><th>publish date</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookArray | orderBy :  orderProperty : false : false ">
+        <!--asc ; false , case sensitive defualt-->
+        <td>{{book.bookId}}</td>
+        <td>{{book.bookName}}</td>
+        <td>{{book.bprice}}</td>
+        <td>{{book.publishDate}}</td>
+        <td>{{book.bookName | charAt : myIndex }}</td>
+       
+       
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<section>
+  <h3>orderBy Pipe</h3>
+  <table border="2">
+    <caption>Book Info</caption>
+    <tr>
+      <th (click) = "sort('bookId')">ID</th>
+      <th (click) = "sort('bookName')">Name</th>
+      <th (click) = "sort('bookPrice')">Price</th>
+      <th (click) = "sort('publishDate')">Publish Date</th>
+    </tr>
+    <tr *ngFor = "let book of bookArray | orderBy : orderProperty">
+      <td>{{ book.bookId }}</td>
+      <td>{{ book.bookName }}</td>
+      <td>{{ book.bprice }}</td>
+      <td>{{ book.publishDate }}</td>
+    </tr>
+  </table>
+</section>
+
+<!--
+<table border="2">
+  <thead >
+      <tr> 
+          <th>Filter Pipe</th>
+         <th><input type="text"  placeholder="Search" [(ngModel)]="str" id="listSearch"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr  >
+          <th>ID</th>
+          <th>NAME</th>
+          <th>Price</th>
+          <th>Publish</th>
+      </tr>
+     
+          <tr *ngFor="let book of books | stringFilter:str">
+          <td>{{book.bookId}}</td>
+          <td>{{ book.bookName }}</td>
+          <td>{{ book.bprice }}</td>
+          <td>{{ book.publish }}</td>
+      </tr>
+
+  </tbody>
+</table>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <tr *ngFor = "let book of bookArray | orderBy : 'bookName'"> -->
+    <!-- <tr *ngFor = "let book of bookArray | orderBy : orderProperty : true"> -->
+    <!-- <tr *ngFor = "let book of bookArray | orderBy : 'bookName' : false : true"> -->

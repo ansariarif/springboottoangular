@@ -1,0 +1,29 @@
+<section class="sect">
+    <h1>this is section part</h1>
+    <h2>W E L C O M E</h2>
+    <p>The earliest commercial Japanese animations date to 1917.
+         A characteristic art style emerged in the <br>
+        <b> 1960s with the works of cartoonist Osamu Tezuka and spread </b>
+          in following decades, developing a large domestic audience. </p>
+
+</section>
+<b>{{title}}</b> <br>
+<button (click)="changeTitle()">CHANGE</button>
+
+<div>
+  <b>{{title}}</b> <br>
+  <i>{{num1+num2}}</i><br>
+  <i>{{num1-num2}}</i><br>
+  <i>{{num1/num2}}</i>
+  
+</div>
+
+
+<section>
+  <h2>two way data binding</h2>
+  {{animetype}} 
+  <br>
+  <label for="">entey anime name</label>
+  <input type="text" [(ngModel)] = "animetype" (keyup)="show()">
+</section>
+

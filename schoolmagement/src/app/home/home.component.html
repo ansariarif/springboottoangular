@@ -1,0 +1,43 @@
+<section class="header">
+  
+    <a [routerLink]="['/login']" [routerLinkActive]="['activeLink']"><i class="fa fa-home"></i></a>
+    <a class="link" *ngIf="isAdmin" [routerLink]="['/admin']" [routerLinkActive]="['activeLink']">Principle</a>
+    <a *ngIf="isAdmin" [routerLink]="['/teachers']" [routerLinkActive]="['activeLink']">teacher</a>
+
+  <!-- ==  <a [routerLink]="['teachers/addform']" [routerLinkActive]="['activeLink']">add teacher</a>-->
+
+    <a *ngIf="isAdmin"  [routerLink]="['/students']" [routerLinkActive]="['activeLink']">student</a>
+
+  <!-- == <a [routerLink]="['students/addstudform']" [routerLinkActive]="['activeLink']">Add student</a>-->
+
+    <a  *ngIf="isAdmin" [routerLink]="['/subjects']" [routerLinkActive]="['activeLink']"> subject</a>
+    <a  *ngIf="isAdmin" [routerLink]="['/add/msg']" [routerLinkActive]="['activeLink']"> Notice</a>
+    <a  *ngIf="isAdmin" [routerLink]="['/query']" [routerLinkActive]="['activeLink']"> Requests</a>
+
+
+  <!-- <a [routerLink]="['subjects/addform']" [routerLinkActive]="['activeLink']">Add subject</a>-->
+    <a *ngIf="isTeacher" [routerLink]="['/reports']" [routerLinkActive]="['activeLink']">Reports</a>
+    <a *ngIf="isTeacher" [routerLink]="['/reports/addform']" [routerLinkActive]="['activeLink']">Renerate report</a>
+    <a *ngIf="isTeacher || isAdmin"  [routerLink]="['/fee']" [routerLinkActive]="['activeLink']">Fee</a>
+    <a *ngIf="isTeacher" [routerLink]="['/fee/addfee']" [routerLinkActive]="['activeLink']">Add Fee</a>
+    <a *ngIf="isTeacher" [routerLink]="['/showstudent']" [routerLinkActive]="['activeLink']">students</a>
+    <a *ngIf="isStudent" [routerLink]="['/showtostudentreport']" [routerLinkActive]="['activeLink']">reports</a>
+    <a *ngIf="isStudent" [routerLink]="['/feetostdents']" [routerLinkActive]="['activeLink']">Fee</a>
+    <a *ngIf="isStudent" [routerLink]="['/msg']" [routerLinkActive]="['activeLink']">Notice</a>
+    <a *ngIf="isStudent" [routerLink]="['/add/query']" [routerLinkActive]="['activeLink']">Request</a>
+    <a *ngIf="isStudent" [routerLink]="['/student/query']" [routerLinkActive]="['activeLink']">Aprovel</a>
+    <!--<a *ngIf="isAdmin" [routerLink]="['/customer']" [routerLinkActive]="['activeLink']">Application</a>
+    <a *ngIf="isTeacher" [routerLink]="['/active/path']" [routerLinkActive]="['activeLink']">Active</a>-->
+   <!-- <button (click)="logout()">logout</button>-->
+   
+   <span (click)="logout()" class="material-icons">logout</span>
+   
+
+  
+    
+   
+  </section> 
+
+  
+  <!------ Include the above in your HEAD tag ---------->
+  

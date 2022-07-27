@@ -1,0 +1,14 @@
+<section class="header">
+    <a [routerLink]="['login']" [routerLinkActive]="['activeLink']">login</a>   
+    <a [routerLink]="['menu']" [routerLinkActive]="['activeLink']">Food Menu</a>
+  
+</section>
+
+
+<section [ngClass]="['routesesction']">
+    <router-outlet></router-outlet>
+</section>
+
+<section>
+    <app-footer></app-footer>
+</section>

@@ -1,0 +1,84 @@
+.Form{
+    border: black solid 3px;
+  
+  
+}
+
+.User {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 3%;
+  }
+  
+  .User td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+ 
+  
+  .User th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+   
+   
+  }
+
+  
+
+  .User td{
+      text-transform: uppercase;
+      background-color: honeydew;
+  }
+
+  h1{
+      font-size: 50px;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: red 10px 10px 10px;
+      margin-top: 5%;
+    }
+
+    button{
+        font-size: 20px;
+        background-color: black;
+        margin-left: 1%;
+
+        color: white;
+        
+    }
+
+      
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+ 
+ 
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #b8d2e6;
+  background-image: linear-gradient(to right, #50a5eb, #5b3785);
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+
+
+#keywords tbody tr { 
+  color: rgb(31, 27, 27);
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}

@@ -1,0 +1,85 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class = "xob">
+    <div class = "box">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+
+            <h1 class = "text-center">Teacher  </h1>
+
+            <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success</strong> Addedd successfully.
+                <button (click)="removemsg()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                 
+                </button>
+              </div>
+             <br>
+            <div class = "card-body">
+                <form  method="POST" (ngSubmit)="SaveData()">
+                  
+                    <div class ="input-container">
+                        <label>   Name </label><br>
+                        <input
+                        type = "text"
+                        name = "name"
+                        [(ngModel)] = "teacher.name"
+                        class = "form-control"
+                        placeholder="Enter Teacher Name" 
+                        />
+                    </div>
+                    
+                    
+                    
+                    <div class ="input-container">
+                        <label>  password </label><br>
+                        <input
+                        type = "text"
+                        name = "passowrd"
+                        [(ngModel)]= "teacher.passowrd"
+                        class = "form-control"
+                        placeholder="Enter password" 
+                        />
+                    </div>
+                    
+                    <div class ="input-container">
+                        <label> gender </label> <br>
+                        <input
+                        type = "text"
+                        name = "gender"
+                        [(ngModel)] = "teacher.gender"
+                        class = "form-control"
+                        placeholder="Enter Gender" 
+                        />
+                    </div>
+                    
+                    <div class ="input-container">
+                        <label> salary </label> <br>
+                        <input
+                        type = "text"
+                        name = "salary"
+                        [(ngModel)] = "teacher.salary"
+                        class = "form-control"
+                        placeholder="Add Salary" 
+                        />
+                    </div>
+
+                    <div class ="input-container">
+                        <label>subject</label><br>
+                        <select [(ngModel)]="teacher.subjectid" name="rollno">
+                            <option class="option" [value]="subject.id" *ngFor="let subject of subjects">{{subject.id + ' - ' + subject.name  }}</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class = "box-footer">
+                        <button type="submit" (click)="addTeacher(teacher,teacher.subjectid)" class = "btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div>
+

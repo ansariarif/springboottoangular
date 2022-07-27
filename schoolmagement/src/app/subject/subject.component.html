@@ -1,0 +1,36 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class="ShowUser">
+    <h1>Subject details</h1>
+    <div class="link">
+        <a  [routerLink]="['/subjects/addform/']">Add New Subject</a>
+     </div>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+               
+                
+                <th>Edit</th>
+                <th>Delete</th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let subject of subject;let i = index">
+                <td>{{subject.id}}</td>
+                <td>{{subject.name}}</td>
+                
+               
+                <td><a  [routerLink]="['/subjects/edit/',subject.id]"><span class="material-icons">edit</span></a></td>
+                <!--<td><button (click)="deleteSubject(subject.id,i)">delete</button></td>-->
+                <td><i (click)="deleteSubject(subject.id,i)" class="material-icons">delete</i></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

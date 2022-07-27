@@ -1,0 +1,112 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class = "xob">
+    <div class = "box">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> fee card </h1>
+            <div class = "card-body">
+                <form  method="POST">
+                   
+                    <div class ="input-container">
+                        <label>annual fee </label><br>
+                        <input
+                        type = "text"
+                        name = "annualfee"
+                        [(ngModel)] = "fee.annualfee"
+                        class = "form-control"
+                        placeholder="Enter  " 
+                        />
+                    </div>
+                    
+                    
+                    
+                    <div class ="input-container">
+                        <label>  tuition fee </label><br>
+                        <input
+                        type = "text"
+                        name = "tuitionfee"
+                        [(ngModel)]= "fee.tuitionfee"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+
+                    <div class ="input-container">
+                        <label>  exam fee </label><br>
+                        <input
+                        type = "text"
+                        name = "examfee"
+                        [(ngModel)]= "fee.examfee"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+
+                    <div class ="input-container">
+                        <label>  game fee </label><br>
+                        <input
+                        type = "text"
+                        name = "gamefee"
+                        [(ngModel)]= "fee.gamefee"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+
+                    <div class ="input-container">
+                        <label>  development fee </label><br>
+                        <input
+                        type = "text"
+                        name = "developmentfee"
+                        [(ngModel)]= "fee.developmentfee"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+
+                    
+                    <div class ="input-container">
+                        <label>  total fee </label><br>
+                        <input
+                        type = "text"
+                        name = "totalfee"
+                        [(ngModel)]= "fee.totalfee"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+
+                    
+                    <div class ="input-container">
+                        <label>  pending </label><br>
+                        <input
+                        type = "text"
+                        name = "pending"
+                        [(ngModel)]= "fee.pending"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+                    
+                    <div class ="input-container">
+                        <label>Student Id</label> <br>
+                        <select [(ngModel)]="fee.rollno" name="rollno">
+                            <option [value]="student.id" *ngFor="let student of students">{{student.id +' '+ student.name}}</option>
+                        </select>
+                    </div>
+                    
+                    
+                    <br>
+                    <div class = "box-footer">
+                        <button type="submit"  (click)="addFee(fee,fee.rollno)" class = "btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div>
+

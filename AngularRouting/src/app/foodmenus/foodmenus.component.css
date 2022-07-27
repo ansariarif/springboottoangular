@@ -1,0 +1,12 @@
+section{
+    background-color: aqua;
+    text-align: center;
+    height: 300px;
+}
+
+table{
+    background-color: burlywood;
+    width: 50%;
+    position: relative;
+    left: 300px;
+}

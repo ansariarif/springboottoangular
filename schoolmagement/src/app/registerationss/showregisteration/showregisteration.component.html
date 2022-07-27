@@ -1,0 +1,46 @@
+<section>
+    <app-home></app-home>
+</section>
+
+
+<div class="ShowUser">
+       <h1>Application for Teacher</h1>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        
+        <thead>
+            <tr>
+                <!--<th>ID</th>-->
+                <th>Applied Date</th>
+                <th>Name</th>
+                <!--<th>password</th>-->
+                <th>age</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>accept</th>
+                <th>Reject</th>
+                <th>Reply</th>
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of customer;let i = index">
+                <!--<td >{{customer.id}}</td>-->
+                <td >{{customer.date}}</td>
+                <td>{{customer.name}}</td>
+                <!--<td>{{customer.password}}</td>-->
+                <td>{{customer.age}}</td>
+                <td>{{customer.subject}}</td>
+                <td>{{customer.aprove}}</td>
+                <td><button (click)="aproveStatus(customer.id)">aprove</button></td>
+                <td><button (click)="aproveStatusAgain(customer.id)">Reject</button></td>
+                <td><a  [routerLink]="['/customer/edit/',customer.id]">send Reply</a></td>
+              
+                
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+

@@ -1,0 +1,174 @@
+/*.Form{
+    border: black solid 3px;
+  
+  
+}
+
+.User {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 3%;
+  }
+  
+  .User td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+ 
+  
+  .User th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+   
+  }
+
+  .User td{
+      text-transform: uppercase;
+      background-color: honeydew;
+  }
+
+  h1{
+      font-size: 50px;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: red 10px 10px 10px;
+    
+    }
+
+    button{
+        font-size: 20px;
+        background-color: black;
+        margin-left: 20%;
+
+        color: white;
+        
+    }  */
+
+    .Form{
+      border: black solid 3px;
+    
+    
+  }
+  
+  .User {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 10%;
+      margin-bottom: 20%;
+     
+    }
+    
+    .User td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+   
+    
+    .User th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: black;
+      color: white;
+     
+    }
+  
+    .User td{
+        text-transform: uppercase;
+        background-color: honeydew;
+    }
+  
+    h1{
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: red 10px 10px 10px;
+        margin-top: 5%;
+        margin-bottom: 2%;
+      
+      }
+  
+      button{
+          font-size: 20px;
+          background-color: black;
+          margin-left: 20%;
+          background-image: linear-gradient(to right,  #4ca1af,#2c3e50);
+          border-radius: 5px;
+          font-size: 20px;
+
+          color: black;
+          
+      }
+  
+  
+      .link>a{
+  
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: 70%;
+       
+      }
+  
+      .ShowUser{
+        border: black solid 1px;
+        background: url("../teacher/35379-9-teacher-transparent-background.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+
+        background-image: linear-gradient(to right, #f8f8f8, #9cc1f7);
+        background-image: linear-gradient(to right,  #4ca1af,#435f7c);
+        background-size: 100% 100%;
+       
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+      min-height:100vh;
+      font-family: 'Noto Sans', sans-serif;
+       
+      }
+
+      #keywords {
+        margin: 0 auto;
+        font-size: 1.2em;
+        margin-bottom: 15px;
+       
+       
+      }
+      
+#keywords thead {
+  cursor: pointer;
+ 
+  /*background-image: linear-gradient(to right, #50a5eb, #5b3785);*/
+  background-image: linear-gradient(to right ,#425e7a, #2f808d);
+  
+  opacity: 0.7;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+
+
+#keywords tbody tr { 
+  color: rgb(31, 27, 27);
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.material-icons{
+  cursor: pointer;
+}

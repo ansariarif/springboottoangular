@@ -1,0 +1,52 @@
+<section>
+    <app-home></app-home>
+</section>
+
+
+<div class="ShowUser">
+    <h1 id="wrapper">Teachers</h1>
+    <div class="link">
+        
+    <a  [routerLink]="['/teachers/addform/']"><span class="material-icons">person_add</span> Teacher</a> 
+    </div>
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+              <!--  <th>Password</th>-->
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Subject</th>
+                <th>Active</th>
+                <th>Edit</th>
+                <th><span  class="material-icons red-color">delete</span></th>
+              
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let teacher of teacher;let i = index">
+                <td >{{teacher.id}}</td>
+                <td>{{teacher.name}}</td>
+            <!--    <td>{{teacher.passowrd}}</td> -->
+
+                <td>{{teacher.gender}}</td>
+                <td>{{teacher.salary}}</td>
+               
+                <td>{{teacher.subject.name}}</td>
+                <td>{{teacher.active}}</td>
+               
+                <td><a [routerLink]="['/teachers/edit/',teacher.id]"><span class="material-icons">edit</span></a></td>
+               <!-- <td><button (click)="deleteTeacher(teacher.id,i)">delete</button></td>-->
+                <td><i (click)="deleteTeacher(teacher.id,i)" class="material-icons">delete</i></td>
+              
+                
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+

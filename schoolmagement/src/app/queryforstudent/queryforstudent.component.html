@@ -1,0 +1,44 @@
+<section>
+    <app-home></app-home>
+</section>
+
+
+<div class="ShowUser">
+    <h1 id="wrapper">Request's</h1>
+    
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        
+        <thead>
+            <tr>
+                <!--<th>ID</th> -->
+                <th>Date</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Message</th>
+                <th>Accept</th>
+                <th>Reject</th>
+                
+
+                
+                
+              
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let query of query;let i = index">
+                <!--<td >{{query.id}}</td>-->
+                <td>{{query.date}}</td>
+                <td>{{query.reason}}</td>
+                <td>{{query.aprove}}</td>
+                <td><a [routerLink]="['/query/edit/',query.id]"> <span class="material-icons">edit</span></a></td>
+                <td><button (click)="aproveStatus(query.id)">aprove</button></td>
+                <td><button (click)="aproveStatusAgain(query.id)">Reject</button></td>
+                
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+

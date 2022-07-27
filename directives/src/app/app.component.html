@@ -1,0 +1,194 @@
+<section>
+  <label >Enter age:</label>
+  <input type="number" [(ngModel)]="age">
+</section>
+<i>Age is: {{age}}</i>
+
+<p *ngIf="age>=18">
+ 
+  <b>you are valid for age</b>
+</p>
+<hr>
+
+<section>
+  <label >Enter age:</label>
+  <input type="number" [(ngModel)]="age">
+</section>
+<i>Age is: {{age}}</i>
+<p *ngIf="age>=18; else elseblock">
+ 
+  <b>you are vlif for age</b>
+</p>
+
+<ng-template #elseblock>
+  <div>
+  <b>soory... you are not valid voter</b>
+</div>
+</ng-template>
+
+<section>
+  <label >Enter age:</label>
+  <input type="number" [(ngModel)]="age">
+</section>
+<i>Age is: {{age}}</i>
+
+<p *ngIf="age>18 then ifblock; else elseblock">
+  <b>you are vlif for age</b>
+</p>
+
+<ng-template #ifblock>
+  <div>
+    <span>inside templsate</span>
+    <b>u are valid</b>
+  </div>
+</ng-template>
+
+<ng-template #elseblock>
+  <div>
+  <b>u are not vlalid</b>
+  </div>
+</ng-template>
+
+<ul>
+  <li *ngFor="let num of numArray">{{num}}</li> <br>
+  
+</ul>
+<br> <hr>
+<table border="2">
+  <tr>
+    <td  *ngFor="let num of numArray">{{num}}</td>
+  </tr>
+</table>
+ <br> <hr>
+
+<table border="2">
+  <tr *ngFor="let num of numArray; let in = index; let cnt=count;let e =even; let od = odd"> <td>{{num}}</td><td>{{in}}</td><td>{{cnt}}</td><td>{{e}}</td><td>{{od}}</td><tr>
+</table>
+
+<br> <hr>
+
+<table border="2">
+  <tr *ngFor="let num of numArray; let i = index; let cnt=count;let e =even;">
+     <td><span *ngIf="e == true; else elseblock">{{num*2}}</span>
+      <ng-template #elseblock> <span>{{num}}</span></ng-template></td>
+     <td>{{i}}</td><td>{{cnt}}</td><td>{{e}}</td><tr>
+</table>
+
+<li *ngFor="let num of numArray ; first as isFirst">
+  <span *ngIf="isFirst">{{num}}</span>
+</li>
+
+
+<li *ngFor="let num of numArray ; last as islast">
+  <span *ngIf="islast">{{num}}</span>
+</li>
+
+<br><hr>
+
+<section>
+  <ul>
+    <li *ngFor="let num of numArray">{{num}}</li> <br>
+    
+  </ul>
+  <h2>use of switch case</h2>
+  <h3>1: push 2: pop</h3>
+  <input type="number" [(ngModel)]="choice"> <!--auto syn-->
+  <div [ngSwitch]="choice">
+  
+    <div *ngSwitchCase="1">
+      <label >enter the number to push</label>
+      <input type="number" #element>  <!--never get syn-->
+      <button (click)="addelement(element.value)">PUSH</button>
+    </div>
+
+    <div *ngSwitchCase="2">
+      <span >removed element:</span>{{removeElement()}}
+    </div>
+    <div *ngSwitchDefault> <b>not valid</b> </div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <h2>nested for</h2>
+  <table border="2">
+    <caption>book libaray</caption>
+    <thead>
+      <tr><th>ID</th><th>NAME</th><th>PRICE</th><th>AUTHORS</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookAarray">
+        <td>{{book.bookid}}</td>
+        <td>{{book.bookName}}</td>
+        <td>{{book.bprice}}</td>
+        <td ><i *ngfor="let author of book.authorName">{{author}}</i></td>
+
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 style="color: red;background: yellow;">neosoft technology</h2>
+  <h2 [ngStyle]="{'color':'red','background-color':'yellow'}">neofodt tebcjofy</h2>
+  <select [(ngModel)]="myColor">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="black">black</option>
+  </select>
+  <h2 [ngStyle]="{'color':myColor,'background-color':'yellow'}">neosoft tebcjofyy</h2>
+
+ 
+<label >choose color</label>
+<input type="color" [(ngModel)]="textColor">
+<h2 [ngStyle]="{'color': textColor,'background-color':'yellow'}">neosoft technology</h2>
+
+
+</section>
+<hr>
+<section>
+  <label >choose color</label>
+  <input type="color"  #colornode (input)="update1(colornode.value)">
+  <label >enter font size</label>
+  <input type="number" #fontnode (input)="update2(fontnode.value)">
+  <p [ngStyle]="myStyle">
+    inida is my country. <br> all indian are brother ans ssissyur.
+  </p>
+</section>
+
+<hr>
+<section>
+  <label >choose color</label>
+  <input type="color"  [(ngModel)]="myStyle.color">
+  <label >enter font size</label>
+  <input type="number" [(ngModel)]="myStyle['font-size.px']">
+  <p [ngStyle]="myStyle">
+    inida is my country. <br> all indian are brother ans ssissyur.
+  </p>
+</section>
+
+<section>
+  <h3 class="borderClass decorateClass">Welcome to neosoft technology</h3>
+  <h3 [ngClass]="{borderClass:true }">Welcome to neosoft technology</h3>
+  <h3 [ngClass]="{borderClass:false,decorateClass:true }">Welcome to neosoft technology</h3>
+  <h3 [ngClass]="myClass">Welcome to neosoft technology</h3>
+  <h3 [ngClass]="myArray">Welcome to neosoft technology</h3>
+  <button (click)="myArray.pop()">pop</button>
+  <b *ngFor="let ele of myArray">{{ele}}</b> <br>
+  <span>{{myArray}}</span>
+</section>
+
+<h2>more exmaple on attribute binding</h2>
+<section>
+  <img [src]="imageSource" alt="" [width]="imageWidth" [height]="imageheight">
+  <button (click)="zoomin()">zoomin</button>
+  <button (click)="zoomout()">zoomout</button>
+</section>
+
+<select [(ngModel)]="cityArray" >
+  <option *ngFor="let city of cityArray" [value]="city">{{city.toUpperCase()}}</option>
+</select>
+<br>
+{{cityArray}}
+

@@ -1,0 +1,43 @@
+
+<section>
+    <app-home></app-home>
+</section>
+
+
+<div class="ShowUser">
+    <h1 id="wrapper">Request status</h1>
+    
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        
+        <thead>
+            <tr>
+                <!--<th>ID</th> -->
+                <th>date</th>
+                <th>reason</th>
+                <th>Feedback</th>
+                <th>Status</th>
+                
+                
+
+                
+                
+              
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let query of query;let i = index">
+                <!--<td >{{query.id}}</td>-->
+                <td>{{query.date}}</td>
+                <td>{{query.reason}}</td>
+                <td>{{query.feeback}}</td>
+                <td>{{query.aprove}}</td>
+               
+                
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+

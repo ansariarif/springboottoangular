@@ -1,0 +1,52 @@
+<p>{{title}}</p>
+
+<hr>
+<!--  ========================attribvute binding========================================= -->
+<table class="tb">
+  <tr>
+    <td>FirstName</td>
+    <td>Lastname</td>
+    <td>Age</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="calVal">contactId</td>
+    <td>Email</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="colVal">city</td>
+    <td>State</td>
+  </tr>
+</table>
+
+<hr>
+
+<!--  ========================ngStyle========================================= -->
+<div [ngStyle]="{'color':'red'}">
+  this is example of ngStyle
+</div>
+<br>
+<div [ngStyle]="{'color': colorVal, 'background-color':'yellow'}">
+  this is example of ngStyle with dynamic
+</div>
+
+<hr>
+
+
+<!-- =====================simple way for ngClass==============================-->
+<div [ngClass]="'one'">
+  this is implementation of ngclass.
+</div>
+
+<!--dynamic way-->
+
+<div [ngClass]="[clsName,clsName2]">
+  this is dynamic ngClass example
+</div>
+
+
+<div [ngClass]="{'two':false,'three':true}">
+  this is dynamic ngClass example with boolean value
+</div>
+
+
+<app-task></app-task>

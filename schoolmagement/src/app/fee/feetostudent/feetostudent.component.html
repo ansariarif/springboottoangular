@@ -1,0 +1,55 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class="ShowUser">
+    <h1>Fee Notification</h1>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <!--<th>Sr No</th>-->
+                <th>annual fee</th>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>tuition fee</th>
+                <th>exam fee</th>
+                <th>game fee </th>
+                <th>development fee</th>
+                <th>total fee</th>
+                <th>pending</th>
+               
+               
+            
+               
+                
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fee of fee;let i = index">
+                <!--<td>{{fee.id}}</td>-->
+                <td>{{fee.annualfee}}</td>
+                <td>{{fee.student.id}}</td>
+                <td>{{fee.student.name}}</td>
+                <td>{{fee.tuitionfee}}</td>
+
+                <td>{{fee.examfee}}</td>
+                <td>{{fee.gamefee}}</td>
+                <td>{{fee.developmentfee}}</td>
+                <td>{{fee.totalfee}}</td>
+                <td>{{fee.pending}}</td>
+              
+                
+                
+               
+          
+               
+               
+               
+              
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+

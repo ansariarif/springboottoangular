@@ -1,0 +1,16 @@
+
+li{ display: inline-block;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+
+.block1{
+    display: inline-block;
+
+}
+
+
+.block3{
+    display: inline-block;
+}

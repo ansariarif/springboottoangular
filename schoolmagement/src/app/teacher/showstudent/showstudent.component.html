@@ -1,0 +1,39 @@
+<section>
+    <app-home></app-home>
+</section>
+
+<div class="ShowUser">
+    <h1>students</h1>
+    
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th>RollNo</th>
+                <th>NAME</th>
+              
+                <th>STD</th>
+                <th>contact</th>
+                <th>address</th>
+
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of student;let i = index">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+               
+                <td>{{student.std}}</td>
+                <td>{{student.contact}}</td>
+                <td>{{student.address}}</td>
+                
+               
+              
+              
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+

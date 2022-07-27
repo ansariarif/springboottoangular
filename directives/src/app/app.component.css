@@ -1,0 +1,15 @@
+li{
+    display: inline-block;
+    border: 2px red solid;
+    padding: 20px;
+}
+
+.borderClass{
+    border: 5px dashed red;
+    border-radius: 30px;
+}
+
+.decorateClass{
+    text-transform: uppercase;
+    text-decoration: underline;
+}

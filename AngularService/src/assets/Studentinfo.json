@@ -1,0 +1,27 @@
+[{
+    
+     "rollno":123,
+     "name":"hari",
+     "percentage":89.99
+},
+{
+    
+    "rollno":125,
+    "name":"yash",
+    "percentage":99.99
+}
+,
+{
+    
+    "rollno":111,
+    "name":"Aash",
+    "percentage":59.99
+},
+{
+    
+    "rollno":222,
+    "name":"ksdash",
+    "percentage":67.99
+}
+
+]

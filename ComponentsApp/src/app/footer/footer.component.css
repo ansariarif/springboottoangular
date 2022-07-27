@@ -1,0 +1,13 @@
+.foot{
+    background-color: black;
+    color: white;
+    border: thistle;
+    height: 100px;
+    text-align: center;
+    bottom: 0;
+}
+
+li{
+    display: inline-block;
+    margin: 10px;
+}

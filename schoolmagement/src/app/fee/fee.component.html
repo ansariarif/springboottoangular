@@ -1,0 +1,55 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class="ShowUser">
+    <h1>Fee details</h1>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <!--<th>ID</th>-->
+                <th>Annual fee</th>
+                <th>Student ID</th>
+                <th>Std</th>
+                <th>Tuition fee</th>
+                <th>Exam fee</th>
+                <th>Game fee </th>
+                <th>Development fee</th>
+                <th>Total fee</th>
+                <th>Pending</th>
+               
+               
+                <th>Remove</th>
+               
+                
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fee of fee;let i = index">
+                <!--<td>{{fee.id}}</td>-->
+                <td>{{fee.annualfee}}</td>
+                <td>{{fee.student.id}}</td>
+                <td>{{fee.student.std}}</td>
+                <td>{{fee.tuitionfee}}</td>
+
+                <td>{{fee.examfee}}</td>
+                <td>{{fee.gamefee}}</td>
+                <td>{{fee.developmentfee}}</td>
+                <td>{{fee.totalfee}}</td>
+                <td>{{fee.pending}}</td>
+              
+                
+                
+               <!-- <td><button (click)="deleteFee(fee.id,i)">Remove</button></td>-->
+                <td><i (click)="deleteFee(fee.id,i)" class="material-icons">delete</i></td>
+               
+               
+               
+              
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,27 @@
+<h1>Data binding</h1>
+<h2>One-way binding</h2>
+
+<div>
+  <b>{{title}}</b> <br>
+  <i>{{num1+num2}}</i>
+  <p>
+    Mupltication is : {{mult()}}
+  </p>
+</div>
+
+<button (click)="changeTitle()">CHANGE</button>
+<button (click)="greet()">click here</button>
+<button (click)="showinfo($event)">click here for event</button>
+<!--
+<p (mouseover)="test()">
+  put mouse over here
+</p>
+-->
+<section>
+  <h2>two way data binding</h2>
+  {{companyname}} 
+  <br>
+  <label for="">entey comapny name</label>
+  <input type="text"[(ngModel)]="companyname" (keyup)="show()">
+</section>
+

@@ -1,0 +1,61 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class = "xob">
+    <div class = "box">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> generate Report</h1>
+            <div class = "card-body">
+                <form  method="POST">
+                   
+                    <div class ="input-container">
+                        <label>   attendence </label><br>
+                        <input
+                        type = "text"
+                        name = "attendence"
+                        [(ngModel)] = "report.attendence"
+                        class = "form-control"
+                        placeholder="Enter in percentage " 
+                        />
+                    </div>
+                    
+                    
+                    
+                    <div class ="input-container">
+                        <label>  score </label><br>
+                        <input
+                        type = "text"
+                        name = "score"
+                        [(ngModel)]= "report.score"
+                        class = "form-control"
+                        placeholder="Enter " 
+                        />
+                    </div>
+                    
+                    <div class ="input-container">
+                        <label>Student Id</label>  <br>
+                        <select [(ngModel)]="report.rollno" name="rollno">
+                            <option [value]="student.id" *ngFor="let student of students">{{student.id + ' - ' + student.name  }}</option>
+                        </select>
+                    </div>
+                    
+                    <div class ="input-container">
+                        <label>subject id</label> <br>
+                        <select [(ngModel)]="report.subjectid" name="subjectid">
+                            <option [value]="subject.id" *ngFor="let subject of subjects">{{subject.id + ' - ' + subject.name  }}</option>
+                        </select>
+                       
+                    </div>
+                    <br>
+                    <div class = "box-footer">
+                        <button type="submit"  (click)="addReport(report,report.rollno,report.subjectid)" class = "btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div>
+

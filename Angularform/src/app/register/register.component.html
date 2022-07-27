@@ -1,0 +1,128 @@
+<section>
+    <h2>Register</h2>
+     <form [formGroup]="registerationForm" (submit)="registerFun()">
+       
+         <label for="name">Enter name</label>
+         <input type="text" id="name" formControlName="name"> <br>
+         <div  [ngClass]="{myColor:true}" *ngIf="fname.invalid && fname.touched"> 
+            <span *ngIf="fname.errors.required;else fnameelse">
+                 <b>this filed is required</b>
+             </span>
+             <ng-template #fnameelse>
+                 <span *ngIf="fname.errors.pattern">
+                     <b>Name should have only aplabet</b>
+                 </span>
+             </ng-template>  
+         </div><br>
+
+         <label for="name">Enter age</label>
+         <input type="number" id="age"  formControlName="age"> <br>
+         <div *ngIf="uage.invalid && uage.touched">
+            <span *ngIf="uage.errors.required; else ageelse">
+                <b [ngClass]="{myColor:true}">this filed is required</b>
+            </span>
+            <ng-template #ageelse>
+                <span *ngIf="uage.errors.min || uage.error.max">
+                    <b>age sholud be in the range of 1 and 120</b>
+                </span>
+            </ng-template>
+        </div><br><br>
+
+
+         <label for="name">Enter email</label>
+         <input type="email" id="mailid"  formControlName="emailId"> <br> 
+         <div *ngIf="email.invalid && email.touched">
+            <span *ngIf="email.errors.required ; else emailelsepart">
+                <b [ngClass]="{myColor:true}">this filed is required</b>
+            </span>
+            <ng-template #emailelsepart>
+                <span *ngIf="email.errors.email">
+                    <b>invlaid email id</b>
+                </span>
+            </ng-template>
+        </div><br>
+
+
+
+
+
+         <label for="name">Enter mobile number</label>
+         <input type="text" id="mobile"  formControlName="mobileNumber"> <br>
+         <div *ngIf="mobile.invalid && mobile.touched">
+            <span *ngIf="mobile.errors.required; else mobileelse">
+                <b [ngClass]="{myColor:true}">this filed is required</b>
+            </span>
+            <ng-template #mobileelse>
+                <span *ngIf="mobile.errors.pattern; else mobileelsepart2">
+                     <b>only digit allow</b>
+                </span>
+                <ng-template #mobileelsepart2>
+                    <span *ngIf="mobile.errors.minlength || mobile.errors.maxlength">
+                        <b>mobile length shold be min 10 to max 12 are allowed</b>
+                   </span>
+                </ng-template>
+            </ng-template>
+        </div><br>
+
+
+
+         <label for="name">Enter user name</label>
+         <input type="text" id="uname"  formControlName="userName"> <br>
+         
+     <div *ngIf="usrname.invalid && usrname.touched">
+         <span *ngIf="usrname.errors.required; else userelsepart">
+            <b [ngClass]="{myColor:true}">this filed is required</b>
+         </span>
+        <ng-template #userelsepart>
+            <span *ngIf="usrname.errors.pattern; else userpart2">
+                 <b>only alphabet are allowed</b>
+            </span>
+            <ng-template #userpart2>
+                <span *ngIf="usrname.errors.minlength || usrname.errors.maxlength">
+                    <b>mobile length shold be min 4 to max 20 are allowed</b>
+
+               </span>
+            </ng-template>
+        </ng-template>
+      </div>
+         <br>
+
+
+
+
+         <label for="name">Enter password</label>
+         <input type="text" id="pass"  formControlName="password"> <br>
+
+         <div [ngClass]="{myColor:true}" *ngIf="usrpass.invalid && usrpass.touched">
+            <span *ngIf="usrpass.errors.required; else passelse">
+               <b>this filed is required</b>
+           </span>
+           <ng-template #passelse>
+               <span *ngIf="usrpass.errors.pattern">
+                   <b>must conatin i upper 1 lower </b>
+
+               </span>
+
+           </ng-template>
+         </div>
+         <br>
+
+
+         <label for="name">Enter confirm password</label>
+         <input type="text" id="c_pass"  formControlName="confirmPassword" [ngStyle]="{'border-color':usrconfirmpass.invalid || registerationForm.errors?.passMismatch? 'red':'green' }"> <br>
+
+         <div [ngClass]="{myColor:true}" *ngIf="usrconfirmpass.invalid && usrconfirmpass.touched">
+            <span *ngIf="usrconfirmpass.errors.required">
+               <b>this filed is required</b>
+   
+           </span>
+         </div>
+         <div  [ngClass]="{myColor:true}" *ngIf="usrconfirmpass.invalid && registerationForm.errors?.passMismatch">
+             <b>both password should match</b>
+
+         </div>
+         <br>
+         <input type="submit" value="Register" [disabled]="registerationForm.invalid">
+         <input type="reset">
+     </form>
+</section>

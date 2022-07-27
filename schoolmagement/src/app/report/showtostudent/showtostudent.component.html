@@ -1,0 +1,46 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class="ShowUser">
+    <h1> Result</h1>
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <!--<th>ID</th>-->
+                <th>Attendacne</th>
+                <th>score</th>
+                <th>rollno</th>
+                <th>Std</th>
+               
+                <th>subject Name</th>
+                <th>Name</th>
+               
+               
+                
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let report of reports;let i = index">
+                <!--<td>{{report.id}}</td>-->
+                <td>{{report.attendence}}</td>
+                <td>{{report.score}}</td>
+
+                <td>{{report.student.id}}</td>
+                <td>{{report.student.std}}</td>
+                
+                <td>{{report.subject.name}}</td>
+                <td>{{report.student.name}}</td>
+                
+               
+               
+               
+              
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+

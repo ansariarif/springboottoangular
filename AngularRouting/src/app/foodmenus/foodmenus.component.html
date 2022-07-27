@@ -1,0 +1,19 @@
+
+
+<section>
+    <table border="2">
+        <caption>Food Menu</caption>
+        <thead>
+            <tr><th>ID</th><th>NAME</th><th>PRICE</th><th>DETAILS</th></tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let food of foodArray">
+                <td>{{food.foodId}}</td>
+                <td>{{food.foodName}}</td>
+                <td>{{food.foodPrice}}</td>
+                <td><button [routerLink]="['/fooddetails',food.foodId,food.foodName]">Show Details</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+</section>

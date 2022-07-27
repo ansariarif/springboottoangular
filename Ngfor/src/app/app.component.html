@@ -1,0 +1,118 @@
+
+
+<section>
+  <h1>
+    THIS IS ORIGINAL ARRAY
+  </h1>
+<li *ngFor="let num of numArray">{{num}}</li>
+</section>
+
+<br><hr>
+<section >
+  <h1>Odd Number</h1>
+<div class="block1" *ngFor="let number of numArray;let i = index">
+  <div class="block2" *ngIf="(number%2 !== 0)" id="odd"> 
+        <h1 *ngIf="i===0"></h1>
+        <li>{{number}}</li>   
+  </div>
+</div>
+</section>
+
+<br> <hr>
+
+<section > 
+   <h1>Even Number</h1>
+  <div class="block3" *ngFor="let number of numArray;let i = index">
+    <div class="block4" *ngIf="(number%2 === 0)" id="even">
+        <h1 *ngIf="i===1"></h1>
+        <li>{{number}}</li>
+    </div>
+</div>
+</section>
+<hr>
+
+
+
+
+<section>
+  <h1>Your Percentage</h1>
+ <P> {{((num1+num2+num3)/300)*100}} %</P><br>
+
+
+
+  <p *ngIf="(((num1+num2+num3)/300)*100) > 70 then ifblock; else elseblock; else elseblock1; else elseblock2"></p>
+  <ng-template #ifblock>
+    <div>
+      <p style="text-decoration: green; ">Result : <b>DISTINCTION</b></p>
+    </div>
+  </ng-template>
+
+  <ng-template #elseblock>
+    <div>
+      <p style="color: limegreen;">Result : <b> FIRST CLASS</b></p>
+    </div>
+  </ng-template>
+
+  <ng-template #elseblock1>
+    <div>
+      <p style="color: lightgreen;">Result : <b> PASS</b></p>
+    </div>
+  </ng-template>
+
+  
+  <ng-template #elseblock2>
+    <div>
+      <p style="color: red;">Result : <b> FAIL</b></p>
+    </div>
+  </ng-template>
+
+</section>
+<br><hr>
+
+
+<hr>
+<h3>Grade Using Switch Case</h3>
+<hr>
+<div>
+  <label>Enter marks 1: </label>
+  <input type="number" #n1><br><br>
+
+  <label>Enter marks 2: </label>
+  <input type="number" #n2><br><br>
+
+  <label>Enter marks 3: </label>
+  <input type="number" #n3><br><br>
+  <br>
+  <button (click) = "percent1(n1.value,n2.value,n3.value)">Check Grade</button><br>
+  <b>Your Percentage: {{ percentage1.toFixed(2) }}</b>
+  <div [ngSwitch] = "true">
+    <div *ngSwitchCase = "percentage1 >= 70 ">
+      <b>Distinction</b>
+    </div>
+    <div *ngSwitchCase = "percentage1 < 70 && percentage1 >= 60">
+      <b>First Class</b>
+    </div>
+    <div *ngSwitchCase = "percentage1 < 60 && percentage1 >= 40">
+      <b>Pass</b>
+    </div>
+    <div *ngSwitchCase = "percentage1 < 40 ">
+      <b>Fail</b>
+    </div>
+    <div *ngSwitchDefault><b>Wrong Grade</b></div>
+</div>
+
+
+<form>
+  <table>
+    <tr>
+      <td><label>USERNAME: </label></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td><label>Password: </label></td>
+      <td><input [type]="passType"> <input type="checkbox" (click) = "show()"> <label>Show password.</label></td>
+    </tr>
+  </table>
+</form>
+
+

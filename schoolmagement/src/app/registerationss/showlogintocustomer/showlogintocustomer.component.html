@@ -1,0 +1,47 @@
+<section>
+    <app-home></app-home>
+</section>
+
+
+<div class="ShowUser">
+       <h1>Application for Teacher</h1>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        
+        <thead>
+            <tr>
+                <!--<th>ID</th>-->
+                <th>application Date</th>
+                <th>Name</th>
+                <!--<th>password</th>-->
+                <th>age</th>
+                <th>Subject</th>
+               
+                <th>accept</th>
+                <th>login password</th>
+                <!--<th>accpeteds date</th>-->
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of customer;let i = index">
+                <!--<td >{{customer.id}}</td>-->
+                <td >{{customer.date}}</td>
+                <td>{{customer.name}}</td>
+                <!--<td>{{customer.password}}</td>-->
+                <td>{{customer.age}}</td>
+                <td>{{customer.subject}}</td>
+               
+                <td>{{customer.aprove}}</td>
+                <td>{{customer.pass}}</td>
+                <!--<td>{{customer.joiningdate}}</td>--> 
+                
+            </tr> 
+
+           
+        </tbody>
+    </table>
+</div>
+
+
+

@@ -1,0 +1,10 @@
+<section>
+    <button (click)=" fetchJsonData()">tecg data</button>
+    <table>
+        <tr *ngFor="let student of studArray">
+        <td>{{student.rollno}} </td>
+        <td>{{student.name}} </td>
+        <td>{{student.percentage}} </td>
+        </tr>
+    </table>
+</section>

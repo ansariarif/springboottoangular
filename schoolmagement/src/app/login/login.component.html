@@ -1,0 +1,53 @@
+<!-- <div class="xob">
+   <div class="box">
+
+   
+      <form method="post" (ngSubmit)="SaveData()">
+         <h2 class="text-center">login </h2>
+         
+         
+         <div class ="input-container">
+        
+         <input type="text" name="user" [(ngModel)]="user" placeholder="User name" /> <br><br>
+         </div>
+
+         <div class ="input-container">   
+        
+         <input  type="password" name="password" [(ngModel)]="password" placeholder="Password"/>
+         </div>
+         <br>
+         <button type="submit" (click)="login()" class="btn">Login</button>
+      </form>
+
+   </div>
+
+</div> -->
+
+
+<!-- Code By Alireza Derakhshan -->
+<!-- Code By Alireza Derakhshan -->
+<body>
+<div class="main">
+   <div class="login-box">
+       <div class="text-login">
+       <p>Login</p>
+       <span>Use your credentials to log in.</span>
+       </div>
+       <div class="login-form">
+           <form method="POST">
+               <input class="form-control" name="user" [(ngModel)]="user" placeholder="User name">
+               <input class="form-control" type="password" name="password" [(ngModel)]="password" placeholder="Password">
+               
+               <button class="form-enter" type="submit" (click)="login()" class="btn">Login</button>
+           </form>
+           <hr>
+           <div class="social-login">
+           <!-- <a  [routerLink]="['/register/']">register ?</a> -->
+           </div>
+       </div>
+   </div>
+</div>
+</body>
+
+
+

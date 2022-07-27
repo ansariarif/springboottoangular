@@ -1,0 +1,49 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class="ShowUser">
+    <h1> Report Card</h1>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+              <!--  <th  >ID&nbsp;</th>-->
+               
+                <th>Attendacne</th>
+                <th>Rollno</th>
+                <th>Name</th>
+                <th>div</th>
+                <th>Score</th>
+                
+                <!--<th >Subject id</th>-->
+                <th>Subject Name</th>
+                <th>Remove</th>
+               
+                
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let report of reports;let i = index " >
+                <!--<td>{{report.id}}</td>-->
+               
+                <td>{{report.attendence}}</td>
+                <td>{{report.student.id}}</td>
+                <td>{{report.student.name}}</td>
+                <td>{{report.student.std}}</td>
+                <td>{{report.score}}</td>
+
+               
+               <!--<td>{{report.subject.id}}</td>-->
+                <td>{{report.subject.name}}</td>
+               <!-- <td><button (click)="deleteReport(report.id,i)">Remove</button></td>-->
+                <td><i (click)="deleteReport(report.id,i)" class="material-icons">delete</i></td>
+               
+               
+              
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+

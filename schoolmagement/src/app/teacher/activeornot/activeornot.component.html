@@ -1,0 +1,51 @@
+
+<section>
+    <app-home></app-home>
+</section>
+
+
+<div class="ShowUser">
+    <h1 id="wrapper">Status</h1>
+   
+    
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        
+        <thead>
+            <tr>
+              
+                <th>Name</th>
+             
+                <th>Gender</th>
+               
+                <th>Subject</th>
+                <th>Active</th>
+                <th>Mark Active</th>
+               
+               
+              
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let teacher of teacher;let i = index">
+               
+                <td>{{teacher.name}}</td>
+           
+
+                <td>{{teacher.gender}}</td>
+              
+               
+                <td>{{teacher.subject.name}}</td>
+                <td>{{teacher.active}}</td>
+               
+               
+              
+               <td><button (click)="aproveStatus(teacher.id)">Mark </button></td>
+              
+                
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+

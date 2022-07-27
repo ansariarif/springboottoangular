@@ -1,0 +1,90 @@
+.header{
+   
+    padding: 10px;
+   
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(to right, #042f52, #69488f, #043055);
+   
+}
+
+section>a{
+    padding: 20px;
+    color: white;
+    
+}  
+
+a{
+    text-decoration: none;
+} 
+
+.material-icons {
+  cursor: pointer;
+  float: right;
+  margin-right: 1%;
+}
+
+.fa fa-home{
+  color: white;
+
+}
+
+
+
+
+/*
+
+.topnav {
+    z-index: 999;
+    position: fixed; 
+    overflow: hidden;
+    background-color: rgb(32, 17, 0, 0.95);
+    padding: 0px 40px;
+    width: 90%;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  
+  .topnav-right {
+    float: right;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(136, 126, 109);
+  }
+  
+  .topnav-right a:hover {
+    background-color: rgb(26, 31, 29);
+  }
+  
+  .topnav a.active {
+    background-color: rgb(221, 221, 221);
+    color: rgb(26, 31, 29);
+  }
+  
+  .topnav input[type="text"] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    font-size: 17px;
+  }  */
+
+
+
+
+  /*======================*/

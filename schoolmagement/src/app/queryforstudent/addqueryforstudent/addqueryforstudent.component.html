@@ -1,0 +1,58 @@
+<section>
+    <app-home></app-home>
+</section>
+<div class = "xob">
+    <div class = "box">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center">query  </h1>
+            <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success</strong> Request successfully.
+                <button (click)="removemsg()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                 
+                </button>
+              </div>
+             <br>
+            <div class = "card-body">
+                <form  method="POST" (ngSubmit)="SaveData()">
+                  
+                    <div class ="input-container">
+                        <mat-form-field>
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="datepicker" placeholder="Select date"  [(ngModel)]= "query.date" name="date">
+                            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #datepicker></mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                    
+                    
+                    
+                    <div class ="input-containers">
+                        <label>  reason </label><br>
+                        <input
+                        type = "text"
+                        name = "reason"
+                        [(ngModel)]= "query.reason"
+                        class = "form-control"
+                        placeholder="Enter reason with std and name" 
+                        />
+                    </div>
+                    
+                  
+                    
+                    
+                   
+                    
+                    <br>
+                    <div class = "box-footer">
+                        <button type="submit" (click)="addQuery(query)" class = "btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div>
+

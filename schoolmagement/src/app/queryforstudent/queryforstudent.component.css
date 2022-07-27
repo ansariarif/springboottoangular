@@ -1,0 +1,135 @@
+.Form{
+    border: black solid 3px;
+  
+  
+}
+
+.User {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 3%;
+    margin-bottom: 20%;
+  }
+  
+  .User td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+ 
+  
+  .User th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+   
+  }
+
+  .User td{
+      text-transform: uppercase;
+      background-color: honeydew;
+  }
+
+  h1{ font-style:oblique;
+      font-size: 50px;
+     
+      text-align: center;
+      text-shadow: rgb(61, 76, 95) 10px 10px 10px;
+    
+    }  
+
+    button{
+        font-size: 20px;
+        background-color: black;
+        margin-left: 20%;
+        background-image: linear-gradient(to right,  #4ca1af,#2c3e50);
+       
+        color: black;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+      
+        
+    }
+
+    button:hover{
+      padding: 5px;
+      color:white;
+    }
+
+    .link{
+      margin-bottom: 2%;
+      margin-left: 10%;
+    }
+
+
+    .link>a{
+
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 20px;
+     
+      margin-bottom: 4%;
+      margin-left: 70%;
+     
+    }
+
+    .ShowUser{
+      border: black solid 1px;
+      min-height: 91vh;
+      background-image: linear-gradient(to right, #84c3f7, #725197);
+      background-image: linear-gradient(to right,  #4ca1af,#2c3e50);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+     
+    }
+
+
+
+
+h1 { 
+  font-family: 'Amarante', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+/** page structure **/
+
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+ 
+ 
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #b8d2e6;
+  background-image: linear-gradient(to right, #50a5eb, #5b3785);
+  background-image: linear-gradient(to right,#40556b,#4ca1af);
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+
+
+#keywords tbody tr { 
+  color: rgb(31, 27, 27);
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
